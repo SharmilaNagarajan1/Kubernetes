@@ -1,5 +1,5 @@
 # *** Pod ***
-- To create the Pod from your YAML file:    kubectl create -f pod-definition.yml
+- To create the Pod from your YAML file:    ```kubectl create -f pod-definition.yml```
 - To list all Pods in your cluster:  kubectl get pods
 - To view detailed information about the Pod:  kubectl describe pod <pod-name>
 - To delete a pod:   kubectl delete pod <pod-name>
