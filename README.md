@@ -1,10 +1,10 @@
-*** Pod ***
+# *** Pod ***
 To create the Pod from your YAML file:    kubectl create -f pod-definition.yml
 To list all Pods in your cluster:  kubectl get pods
 To view detailed information about the Pod:  kubectl describe pod <pod-name>
 To delete a pod:   kubectl delete pod <pod-name>
 
-*** Replication Controller ***
+# *** Replication Controller ***
 To create the Replication Controller:  kubectl create -f rc-definition.yml
 To verify rs has been cretaed:   kubectl get replicationcontroller
 To view the pods managed by the replication controller:  kubectl get pods
