@@ -26,7 +26,7 @@
                               (or)
         ```kubectl scale --replicas=6 replicaset myapp-replicaset```
 # *** Deployment ***
-- To craete the deployment from your YAML file:  ```kubectl create -f deployment.yaml```
+- To create the deployment from your YAML file:  ```kubectl create -f deployment.yaml```
 - To list deployments:  ``` kubectl get deployments```
 - To inspect the pods created by the deployment:   ```kubectl get pods```
 - To view detailed information about the deployment:   ```kubectl describe deployment <deployment-name>```
