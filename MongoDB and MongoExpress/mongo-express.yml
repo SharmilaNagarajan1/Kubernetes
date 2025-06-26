@@ -36,7 +36,7 @@ spec:
               name: mongodb-configmap
               key: database_url
         - name: ME_CONFIG_BASICAUTH
-         value: "false"
+          value: "false"
 ---
 apiVersion: v1
 kind: Service
