@@ -29,5 +29,5 @@ Within a minute, the load balancer should be confirmed up and running. Wait for 
 
 ```kubectl get service```
 
-## 7. Browse to external IP http:// 20.70.0.191
+## 7. Browse to external IP http://<ExternalIPOfService>
 You should see your application is running 
