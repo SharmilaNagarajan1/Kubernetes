@@ -1,4 +1,4 @@
-# Deploying a Node.js App in AKS with LoadBalancer Service
+# Deploying an App in AKS with LoadBalancer Service
 
 This guide demonstrates how to deploy a simple Node.js application in Azure Kubernetes Service (AKS) and expose it using a LoadBalancer service.
 
@@ -6,10 +6,9 @@ This guide demonstrates how to deploy a simple Node.js application in Azure Kube
 
 ## 1. Create a Namespace
 
-```bash
-kubectl create namespace demo
+```kubectl create namespace demo```
 
-## 2. Create a deployment that runs your application pods
+## 2. Create a deployment that runs your application pods called deployment.yml
 
 ## 3. Apply the deployment to your cluster by running the following command:
 
@@ -22,7 +21,7 @@ But it’s not reachable from outside the cluster. That’s where a Load Balance
 
 ## 5. Apply the service to your cluster by running the following command
 
-```kubectl apply -f service.yml``
+```kubectl apply -f service.yml```
 
 Within a minute, the load balancer should be confirmed up and running. Wait for the service to get an external IP address assigned by Azure.
 
