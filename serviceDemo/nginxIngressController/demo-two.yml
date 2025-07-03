@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo-two
+  namespace: ingress-nginx
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: demo-two
+  template:
+    metadata:
+      labels:
+        app: demo-two
+    spec:
+      containers:
+      - name: demo-two
+        image: hashicorp/http-echo
+        args:
+        - "-text=Welcome to Orange"
+        ports:
+        - containerPort: 5678
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: demo-two
+  namespace: ingress-nginx
+spec:
+  selector:
+    app: demo-two
+  ports:
+  - port: 80
+    targetPort: 5678
+  type: ClusterIP

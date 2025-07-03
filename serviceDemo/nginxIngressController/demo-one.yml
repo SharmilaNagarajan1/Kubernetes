@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo-one
+  namespace: ingress-nginx
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: demo-one
+  template:
+    metadata:
+      labels:
+        app: demo-one
+    spec:
+      containers:
+      - name: demo-one
+        image: hashicorp/http-echo
+        args:
+        - "-text=Welcome to Apple 🍏"
+        ports:
+        - containerPort: 5678
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: demo-one
+  namespace: ingress-nginx
+spec:
+  type: ClusterIP
+  selector:    
+    app: demo-one
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 5678
+ 
