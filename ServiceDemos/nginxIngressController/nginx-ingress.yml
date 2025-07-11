@@ -1,0 +1,25 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: demo-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  ingressClassName: nginx
+  rules:
+  - http:
+      paths:
+      - path: /apple
+        pathType: Prefix
+        backend:
+          service:
+            name: demo-one
+            port:
+              number: 80
+      - path: /orange
+        pathType: Prefix
+        backend:
+          service:
+            name: demo-two
+            port:
+              number: 80
